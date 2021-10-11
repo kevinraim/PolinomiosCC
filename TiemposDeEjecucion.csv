@@ -1,0 +1,32 @@
+Polinomio grado 0, X = 0
+Evaluar sucesivas: ,342000
+Evaluar recursiva: ,4200
+Evaluar recursiva par: ,3300
+Evaluar programacion dinamica: ,5200
+Evaluar mejorada: ,1400
+Evaluar Math.pow: ,27200
+Evaluar horner: ,1300
+Polinomio grado 0, X = 0
+Evaluar sucesivas: ,5600
+Evaluar recursiva: ,3100
+Evaluar recursiva par: ,2900
+Evaluar programacion dinamica: ,1202100
+Evaluar mejorada: ,2800
+Evaluar Math.pow: ,28700
+Evaluar horner: ,1600
+Polinomio grado 0, X = 0
+Evaluar sucesivas: ,6100
+Evaluar recursiva: ,3000
+Evaluar recursiva par: ,3100
+Evaluar programacion dinamica: ,1197300
+Evaluar mejorada: ,4500
+Evaluar Math.pow: ,156100
+Evaluar horner: ,1900
+Polinomio grado 0, X = 0
+Evaluar sucesivas: ,6100
+Evaluar recursiva: ,3000
+Evaluar recursiva par: ,2700
+Evaluar programacion dinamica: ,2900
+Evaluar mejorada: ,1300
+Evaluar Math.pow: ,1124500
+Evaluar horner: ,47100
