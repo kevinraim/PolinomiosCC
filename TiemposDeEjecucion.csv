@@ -1,120 +1,26 @@
-Polinomio grado 0, X = 0
-Evaluar sucesivas: ,342000
-Evaluar recursiva: ,4200
-Evaluar recursiva par: ,3300
-Evaluar programacion dinamica: ,5200
-Evaluar mejorada: ,1400
-Evaluar Math.pow: ,27200
-Evaluar horner: ,1300
-Polinomio grado 0, X = 0
-Evaluar sucesivas: ,5600
-Evaluar recursiva: ,3100
-Evaluar recursiva par: ,2900
-Evaluar programacion dinamica: ,1202100
-Evaluar mejorada: ,2800
-Evaluar Math.pow: ,28700
-Evaluar horner: ,1600
-Polinomio grado 0, X = 0
-Evaluar sucesivas: ,6100
-Evaluar recursiva: ,3000
-Evaluar recursiva par: ,3100
-Evaluar programacion dinamica: ,1197300
-Evaluar mejorada: ,4500
-Evaluar Math.pow: ,156100
-Evaluar horner: ,1900
-Polinomio grado 0, X = 0
-Evaluar sucesivas: ,6100
-Evaluar recursiva: ,3000
-Evaluar recursiva par: ,2700
-Evaluar programacion dinamica: ,2900
-Evaluar mejorada: ,1300
-Evaluar Math.pow: ,1124500
-Evaluar horner: ,47100
-Polinomio grado 0, X = 0
-Evaluar sucesivas: ,6000
-Evaluar recursiva: ,3000
-Evaluar recursiva par: ,3100
-Evaluar programacion dinamica: ,2800
-Evaluar mejorada: ,1400
-Evaluar Math.pow: ,1160600
-Evaluar horner: ,45200
-Polinomio grado 0, X = 0
-Evaluar sucesivas: ,5800
-Evaluar recursiva: ,3100
-Evaluar recursiva par: ,3000
-Evaluar programacion dinamica: ,3000
-Evaluar mejorada: ,1200400
-Evaluar Math.pow: ,79000
-Evaluar horner: ,29100
-Polinomio grado 0, X = 0
-Evaluar sucesivas: ,5800
-Evaluar recursiva: ,3100
-Evaluar recursiva par: ,3100
-Evaluar programacion dinamica: ,5300
-Evaluar mejorada: ,1156100
-Evaluar Math.pow: ,30400
-Evaluar horner: ,1600
-Polinomio grado 0, X = 0
-Evaluar sucesivas: ,7000
-Evaluar recursiva: ,3100
-Evaluar recursiva par: ,3100
-Evaluar programacion dinamica: ,5700
-Evaluar mejorada: ,575800
-Evaluar Math.pow: ,30300
-Evaluar horner: ,1700
-Polinomio grado 0, X = 0
-Evaluar sucesivas: ,6500
-Evaluar recursiva: ,3000
-Evaluar recursiva par: ,3000
-Evaluar programacion dinamica: ,5300
-Evaluar mejorada: ,1275900
-Evaluar Math.pow: ,67700
-Evaluar horner: ,2100
-Polinomio grado 0, X = 0
-Evaluar sucesivas: ,6000
-Evaluar recursiva: ,3100
-Evaluar recursiva par: ,2900
-Evaluar programacion dinamica: ,5200
-Evaluar mejorada: ,1200000
-Evaluar Math.pow: ,31500
-Evaluar horner: ,1600
-Polinomio grado 0, X = 0
-Evaluar sucesivas: ,5500
-Evaluar recursiva: ,3100
-Evaluar recursiva par: ,3100
-Evaluar programacion dinamica: ,5400
-Evaluar mejorada: ,1349000
-Evaluar Math.pow: ,58200
-Evaluar horner: ,1800
-Polinomio grado 0, X = 0
-Evaluar sucesivas: ,6300
-Evaluar recursiva: ,3300
-Evaluar recursiva par: ,3000
-Evaluar programacion dinamica: ,1294200
-Evaluar mejorada: ,2300
-Evaluar Math.pow: ,49300
-Evaluar horner: ,1500
-Polinomio grado 0, X = 0
-Evaluar sucesivas: ,6200
-Evaluar recursiva: ,3200
-Evaluar recursiva par: ,3000
-Evaluar programacion dinamica: ,1206600
-Evaluar mejorada: ,2600
-Evaluar Math.pow: ,29000
-Evaluar horner: ,1500
-Polinomio grado 0, X = 0
-Evaluar sucesivas: ,6200
-Evaluar recursiva: ,3100
-Evaluar recursiva par: ,3000
-Evaluar programacion dinamica: ,1155400
-Evaluar mejorada: ,2400
-Evaluar Math.pow: ,29800
-Evaluar horner: ,1600
-Polinomio grado 0, X = 0
-Evaluar sucesivas: ,6300
-Evaluar recursiva: ,22100
-Evaluar recursiva par: ,3300
-Evaluar programacion dinamica: ,1189500
-Evaluar mejorada: ,2500
-Evaluar Math.pow: ,30000
-Evaluar horner: ,1500
+X = 0, Polinomio grado 0, Polinomio grado 4, Polinomio grado 8
+Evaluar sucesivas: ,3900,2500,1200,
+Evaluar recursiva: ,900,1500,1600,
+Evaluar recursiva par: ,700,1500,1600,
+Evaluar programacion dinamica: ,700,1900,1000,
+Evaluar mejorada: ,800,600,500,
+Evaluar Math.pow: ,700,21100,500,
+Evaluar horner: ,700,600,400,
+
+X = 4.22, Polinomio grado 0, Polinomio grado 4, Polinomio grado 8
+Evaluar sucesivas: ,500,800,1100,
+Evaluar recursiva: ,100,800,1500,
+Evaluar recursiva par: ,100,800,1500,
+Evaluar programacion dinamica: ,200,900,800,
+Evaluar mejorada: ,200,400,400,
+Evaluar Math.pow: ,100,3100,800,
+Evaluar horner: ,200,500,400,
+
+X = 13, Polinomio grado 0, Polinomio grado 4, Polinomio grado 8
+Evaluar sucesivas: ,300,800,1000,
+Evaluar recursiva: ,100,800,2100,
+Evaluar recursiva par: ,100,900,1500,
+Evaluar programacion dinamica: ,200,900,800,
+Evaluar mejorada: ,300,400,300,
+Evaluar Math.pow: ,100,700,1000,
+Evaluar horner: ,200,400,700,

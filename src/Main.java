@@ -1,13 +1,23 @@
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.PrintWriter;
+import java.io.IOException;
 
 public class Main {
 
 	public static void main(String[] args) {
+		
+		try {
+			tiemposDeEjecucionCsv("TiemposDeEjecucion.csv");
+		}
+		catch(IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	static void tiemposDeEjecucionCsv(String nombreCsv) throws FileNotFoundException {
+		
 		Polinomio p0 = new Polinomio(new double[] {3}); //Polinomio grado 0
 		Polinomio p4 = new Polinomio(new double[] {8.32, 2.21, 3, 14.5, 4.44}); //Polinomio grado 4
-		Polinomio p8 = new Polinomio(new double[] {7.2, 4.55, 3.2, 9.7, 4.12, 6.65, 7.44, 3.24, 0}); //Polinomio grado 8
+		Polinomio p8 = new Polinomio(new double[] {0.16, -1.8, -6, 12.7, 9.12, 0, 7.44, 3.24, 0}); //Polinomio grado 8
 		
 		String[] evaluadoresEnOrden = new String[7];
 		evaluadoresEnOrden[0] = "Evaluar sucesivas: ";
@@ -18,27 +28,31 @@ public class Main {
 		evaluadoresEnOrden[5] = "Evaluar Math.pow: ";
 		evaluadoresEnOrden[6] = "Evaluar horner: ";
 		
-		long[] tiempos = new TiemposDeEjecucion(p8, 4).calcularTiemposDeEjecucion();
+		csvWriter csv = new csvWriter(nombreCsv);
 		
-		try {
-			FileOutputStream fos =  new FileOutputStream("TiemposDeEjecucion.csv", true);
-			PrintWriter pw = new PrintWriter(fos);
-			
-			pw.println("Polinomio grado 0, X = 0");
-			cargarTiemposDeEjecucionCSV(pw, evaluadoresEnOrden, tiempos);
-			pw.close();
-			
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		csv.agregarLinea("X = 0, Polinomio grado 0, Polinomio grado 4, Polinomio grado 8");
+		double x = 0;
+		long[][] tiempos = new long[3][];
+		tiempos[0] = new TiemposDeEjecucion(p0, x).calcularTiemposDeEjecucion();
+		tiempos[1] = new TiemposDeEjecucion(p4, x).calcularTiemposDeEjecucion();
+		tiempos[2] = new TiemposDeEjecucion(p8, x).calcularTiemposDeEjecucion();
+		csv.agregarTiemposDeEjecucion(evaluadoresEnOrden, tiempos);
 		
-	}
-	
-	static void cargarTiemposDeEjecucionCSV(PrintWriter pw, String[] evaluadores, long[] tiempos) {
-		for(int i = 0; i<tiempos.length; i++) {
-			pw.println(evaluadores[i] + "," + tiempos[i]);
-		}
+		csv.agregarLinea("\nX = 4.22, Polinomio grado 0, Polinomio grado 4, Polinomio grado 8");
+		x = 4.22;
+		tiempos[0] = new TiemposDeEjecucion(p0, x).calcularTiemposDeEjecucion();
+		tiempos[1] = new TiemposDeEjecucion(p4, x).calcularTiemposDeEjecucion();
+		tiempos[2] = new TiemposDeEjecucion(p8, x).calcularTiemposDeEjecucion();
+		csv.agregarTiemposDeEjecucion(evaluadoresEnOrden, tiempos);
+		
+		csv.agregarLinea("\nX = 13, Polinomio grado 0, Polinomio grado 4, Polinomio grado 8");
+		x = 13;
+		tiempos[0] = new TiemposDeEjecucion(p0, x).calcularTiemposDeEjecucion();
+		tiempos[1] = new TiemposDeEjecucion(p4, x).calcularTiemposDeEjecucion();
+		tiempos[2] = new TiemposDeEjecucion(p8, x).calcularTiemposDeEjecucion();
+		csv.agregarTiemposDeEjecucion(evaluadoresEnOrden, tiempos);
+		
+		csv.close();
 	}
 
 }

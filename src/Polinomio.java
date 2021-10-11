@@ -3,18 +3,14 @@ public class Polinomio {
 	
 	private int grado;
 	private double[] coeficientes;
-
-	// La posicion 0 del arreglo de coeficientes contiene el coeficiente de grado n
-	// la posicion n contiene al termino independiente.
-	
-	
+		
 	public Polinomio(double [] coeficientes) {
 		this.grado = coeficientes.length - 1;
 		this.coeficientes = coeficientes;
 	}
 	
-	//Escribir evaluarMSucesivas utilizando cálculo de potencia por multiplicaciones sucesivas
-	double evaluarMSucesivas(double x) {
+	
+	public double evaluarMSucesivas(double x) {
 		
 		double total = coeficientes[grado];
 		
@@ -39,10 +35,8 @@ public class Polinomio {
 	}
 	
 	
-	/*Escribir evaluarRecursiva utilizando el siguiente calculo de potencia recursiva:
-	a) Sin considerar si el exponente es par o impar:
-	potencia (x, n) = x * potencia(x, n-1)*/
-	double evaluarRecursiva(double x){
+	
+	public double evaluarRecursiva(double x){
 		double total = coeficientes[grado];
 		
 		if(grado < 1)
@@ -62,7 +56,8 @@ public class Polinomio {
 	}
 	
 	
-	double evaluarRecursivaPar(double x) {
+
+	public double evaluarRecursivaPar(double x) {
 		double total = coeficientes[grado];
 		
 		if(grado < 1)
@@ -74,12 +69,6 @@ public class Polinomio {
 		return total;
 	}
 	
-	/*Escribir evaluarRecursiva utilizando el siguiente calculo de potencia recursiva:
-	b) Considerando si el exponente es par o impar:
-	Si n es par:
-	potencia(x, n) = potencia(x*x, n/2)
-	Si n es impar
-	potencia(x, n) = x * potencia (x, n-1)*/
 	private double potenciaRecursPar(double x, int n) {
 		if(n==1) {
 			return x;
@@ -88,7 +77,8 @@ public class Polinomio {
 	}
 	
 	
-	double evaluarProgDinamica(double x){
+	
+	public double evaluarProgDinamica(double x){
 		double total = coeficientes[grado];
 		
 		if(grado < 1)
@@ -99,7 +89,7 @@ public class Polinomio {
 		for(int i = grado; i>0; i--) {
 			total += coeficientes[i-1] * potencias[grado-i];
 		}
-		System.out.println("TT: " + total);
+		
 		return total;
 	}
 	
@@ -115,7 +105,8 @@ public class Polinomio {
 	}
 	
 	
-	double evaluarMejorada(double x) {
+	
+	public double evaluarMejorada(double x) {
 		double potencias = x;
 		double total = coeficientes[grado];
 		
@@ -129,7 +120,9 @@ public class Polinomio {
 		return total;
 	}
 	
-	double evaluarPow(double x){
+	
+	
+	public double evaluarPow(double x){
 		double total = coeficientes[grado];
 		
 		if(grado < 1)
@@ -142,8 +135,9 @@ public class Polinomio {
 		return total;
 	}
 	
+	
 
-	double evaluarHorner(double x) {
+	public double evaluarHorner(double x) {
 		double total = coeficientes[0];
 		
 		if(grado < 1)
@@ -152,7 +146,7 @@ public class Polinomio {
 		for(int i = 1; i<coeficientes.length; i++) {
 			total = coeficientes[i] + (total*x);
 		}
-
+		
 		return total;
 	}
 	
