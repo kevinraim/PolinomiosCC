@@ -87,18 +87,19 @@ public class Polinomio {
 		return n % 2 == 0 ? potenciaRecursPar(x*x, n/2) : x * potenciaRecursPar(x, n-1);
 	}
 	
-	//REHACER
+	
 	double evaluarProgDinamica(double x){
 		double total = coeficientes[grado];
 		
 		if(grado < 1)
 			return total;
 		
-		double[] potencias = potenciaDinamica(x, coeficientes.length-1);
+		double[] potencias = potenciaDinamica(x, grado);
 		
 		for(int i = grado; i>0; i--) {
-			total += coeficientes[grado - i] * potencias[grado - i];
+			total += coeficientes[i-1] * potencias[grado-i];
 		}
+		System.out.println("TT: " + total);
 		return total;
 	}
 	
@@ -110,20 +111,19 @@ public class Polinomio {
 		for(int i = 1; i<n; i++) {
 			potencias[i] = potencias[i-1] * x;
 		}
-		
 		return potencias;
 	}
 	
-	//REHACER
+	
 	double evaluarMejorada(double x) {
 		double potencias = x;
-		double total = coeficientes[0];
+		double total = coeficientes[grado];
 		
 		if(grado < 1)
 			return total;
 		
-		for(int i = 1; i<coeficientes.length; i++) {
-			total += coeficientes[i] * potencias;
+		for(int i = grado; i>0; i--) {
+			total += coeficientes[i-1] * potencias;
 			potencias *= x;
 		}
 		return total;
@@ -138,21 +138,21 @@ public class Polinomio {
 		for(int i = grado; i>0; i--) {
 			total += coeficientes[grado - i] * Math.pow(x, i);
 		}
-		System.out.println("Total :" + total);
+
 		return total;
 	}
 	
-	
-	//REHACER
+
 	double evaluarHorner(double x) {
-		double total = coeficientes[grado];
+		double total = coeficientes[0];
 		
 		if(grado < 1)
 			return total;
 		
-		for(int i = grado-1; i>=0; i--) {
+		for(int i = 1; i<coeficientes.length; i++) {
 			total = coeficientes[i] + (total*x);
 		}
+
 		return total;
 	}
 	
